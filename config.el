@@ -1,6 +1,5 @@
 ;;;  -*- lexical-binding: t; -*-
 
-
 ;; use local eslint from node_modules before global
 ;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
 (defun my/use-eslint-from-node-modules ()
@@ -72,6 +71,12 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 (exec-path-from-shell-copy-env "GOPATH")
+
+
+
+;; ==================================================
+;; Packages
+;; ==================================================
 
 (def-package! zoom-frm
   :commands (zoom-frm-out zoom-frm-in))
