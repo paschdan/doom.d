@@ -76,6 +76,8 @@
 (def-package! zoom-frm
   :commands (zoom-frm-out zoom-frm-in))
 
+;; git-link
+(use-package git-link)
 
 ;; ==================================================
 ;; Keybindings
@@ -83,9 +85,15 @@
 
 (map!
       :n "M-="   #'zoom-frm-in
-      :n "M--"   #'zoom-frm-out)
+      :n "M--"   #'zoom-frm-out
+
+      (:after evil-magit
+        :map (magit-mode-map)
+        :n "yc" #'git-link-commit)
+      )
 
 (map! :leader
         :desc "Yank filename relative to proj"             :n "y" #'my/yank-buffer-filename-relative-to-project
+        :desc "Copy git url" :n "gu" #'git-link
         :desc "Rename current file" :n "fr" #'rename-current-buffer-file
         :desc "resume latest ivy" :nv "=" #'ivy-resume)
