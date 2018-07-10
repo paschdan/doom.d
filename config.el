@@ -69,4 +69,5 @@
       :n "M--"   #'zoom-frm-out)
 
 (map! :leader
-        :desc "Yank filename relative to proj"             :n "y" #'my/yank-buffer-filename-relative-to-project)
+        :desc "Yank filename relative to proj"             :n "y" #'my/yank-buffer-filename-relative-to-project
+        :desc "resume latest ivy" :nv "=" #'ivy-resume)
