@@ -26,7 +26,7 @@
 
 (defun my/yank-buffer-filename-relative-to-project ()
   (interactive)
-  (message (kill-new(paschdan/my-proj-relative-buf-name))))
+  (message (kill-new(my/my-proj-relative-buf-name))))
 
 ;; ==================================================
 ;; Settings
