@@ -33,8 +33,8 @@
       ;fci               ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE tags
        nav-flash         ; blink the current line after jumping
-       neotree           ; a project drawer, like NERDTree for vim
-      ;treemacs          ; a project drawer, like neotree but cooler
+       ;neotree           ; a project drawer, like NERDTree for vim
+       treemacs          ; a project drawer, like neotree but cooler
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
@@ -48,6 +48,7 @@
        :editor
       ;parinfer          ; turn lisp into python, sort of
        rotate-text       ; cycle region at point between text candidates
+       multiple-cursors
 
        :emacs
        dired             ; making dired pretty [functional]
@@ -87,9 +88,9 @@
        emacs-lisp        ; drown in parentheses
       ;ess               ; emacs speaks statistics
       ;go                ; the hipster dialect
-      ;(haskell +intero) ; a language that's lazier than I am
+      (haskell +intero) ; a language that's lazier than I am
       ;hy                ; readability of scheme w/ speed of python
-      ;(java +meghanada) ; the poster child for carpal tunnel syndrome
+      (java +meghanada) ; the poster child for carpal tunnel syndrome
       (javascript        ; all(hope(abandon(ye(who(enter(here))))))
        +lookup)
       ;julia             ; a better, faster MATLAB
@@ -107,7 +108,7 @@
         +export          ; Exporting org to whatever you want
         +present)        ; Emacs for presentations
       ;perl              ; write code no one else can comprehend
-      ;php               ; perl's insecure younger brother
+      php               ; perl's insecure younger brother
       ;plantuml          ; diagrams for confusing people more
       ;purescript        ; javascript, but functional
       ;python            ; beautiful is better than ugly
