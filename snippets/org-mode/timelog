@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: timelog
+# key: tl
+# --
+
+** $1
+*** [ ] reconstruction
+*** [ ] development
+  *** [ ] code review

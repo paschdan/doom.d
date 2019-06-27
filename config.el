@@ -65,8 +65,6 @@
 ;; Settings
 ;; ==================================================
 
-;; maximize
-(toggle-frame-maximized)
 
 ;; user settings
 (setq
@@ -84,10 +82,6 @@
   (push "~/.doom.d/snippets" yas-snippet-dirs))
 
 (add-hook! clojure-mode 'rainbow-delimiters-mode)
-
-(when (memq window-system '(mac ns))
- (exec-path-from-shell-initialize))
-
 
 ;; ==================================================
 ;; Packages
@@ -117,3 +111,6 @@
         :desc "Copy git url" :n "gu" #'git-link
         :desc "Rename current file" :n "fr" #'rename-current-buffer-file
         :desc "resume latest ivy" :nv "=" #'ivy-resume)
+
+;; maximize
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
