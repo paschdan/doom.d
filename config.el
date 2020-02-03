@@ -73,7 +73,7 @@
  doom-theme 'doom-nord)
 
 ;; UI
-(setq doom-font (font-spec :family "Source Code Pro" :size 14))
+(setq doom-font (font-spec :family "MesloLGL Nerd Font" :size 12))
 (setq doom-big-font (font-spec :family "Source Code Pro" :size 18))
 (setq doom-vibrant-brighter-modeline t)
 
@@ -91,7 +91,7 @@
   :commands (zoom-frm-out zoom-frm-in))
 
 ;; git-link
-(use-package git-link)
+;;(use-package git-link)
 
 ;; ==================================================
 ;; Keybindings
@@ -114,3 +114,6 @@
 
 ;; maximize
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
